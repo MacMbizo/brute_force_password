@@ -29,3 +29,5 @@ def get_password(password):
 
 start_time = time.time()
 
+print(get_password('mario123'))
+print(round(time.time() - start_time, 2), 's')
