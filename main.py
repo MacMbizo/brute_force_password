@@ -23,3 +23,7 @@ def brute_force(password, min_length=4, max_length=9):
                 return f'The password is {guess} (Attempt #{attempts})'
             print(guess, attempts)
 
+def get_password(password):
+    common = guess_common_passwords(password)
+    return brute_force(password) if common == 0 else common
+
