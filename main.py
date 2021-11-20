@@ -12,3 +12,14 @@ def guess_common_passwords(password):
 
     return 0
 
+def brute_force(password, min_length=4, max_length=9):
+    chars = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+    attempts = 0
+    for password_length in range(min_length, max_length):
+        for guess in itertools.product(chars, repeat = password_length):
+            attempts += 1
+            guess = ''.join(guess)
+            if guess == password:
+                return f'The password is {guess} (Attempt #{attempts})'
+            print(guess, attempts)
+
