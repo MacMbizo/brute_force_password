@@ -27,3 +27,5 @@ def get_password(password):
     common = guess_common_passwords(password)
     return brute_force(password) if common == 0 else common
 
+start_time = time.time()
+
