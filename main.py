@@ -13,7 +13,7 @@ def guess_common_passwords(password):
     return 0
 
 def brute_force(password, min_length=4, max_length=9):
-    chars = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
+    chars = string.ascii_lowercase + string.digits 
     attempts = 0
     for password_length in range(min_length, max_length):
         for guess in itertools.product(chars, repeat = password_length):
@@ -29,5 +29,5 @@ def get_password(password):
 
 start_time = time.time()
 
-print(get_password('mario123'))
+print(get_password('a123'))
 print(round(time.time() - start_time, 2), 's')
