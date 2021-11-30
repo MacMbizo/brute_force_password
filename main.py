@@ -29,5 +29,5 @@ def get_password(password):
 
 start_time = time.time()
 
-print(get_password('a123'))
+print(get_password('a123')) #testing using an easy password.
 print(round(time.time() - start_time, 2), 's')
